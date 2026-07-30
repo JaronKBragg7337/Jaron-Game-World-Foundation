@@ -1,0 +1,74 @@
+{
+  "$schema": "./schemas/registry.schema.json",
+  "foundationVersion": "0.1.0",
+  "conventions": {
+    "coordinateSystem": "right-handed-preferred",
+    "worldUpAxis": "+Y",
+    "visualForwardAxis": "+Z",
+    "groundPivot": "ground-contact-center",
+    "units": "meters"
+  },
+  "modules": {
+    "thirdPersonMobileControls": {
+      "status": "experimental",
+      "version": "0.1.0",
+      "path": "controls/mobile/third-person",
+      "demo": "examples/control-playground",
+      "supports": ["threejs"],
+      "plannedPorts": ["unity", "unreal"],
+      "requiredTests": [
+        "horizontal-direction",
+        "camera-relative-movement",
+        "vertical-look",
+        "pitch-clamp",
+        "touch-cancel",
+        "simultaneous-move-look",
+        "button-touch-isolation",
+        "safe-area-layout",
+        "camera-collision"
+      ]
+    },
+    "vehicleAxisConvention": {
+      "status": "experimental",
+      "version": "0.1.0",
+      "path": "vehicles/shared/axis-convention",
+      "supports": ["threejs", "unity", "unreal"],
+      "requiredTests": [
+        "visual-forward-matches-motion",
+        "steering-direction",
+        "reverse-direction",
+        "wheel-orientation",
+        "camera-follow-alignment"
+      ]
+    },
+    "assetPlacementContract": {
+      "status": "experimental",
+      "version": "0.1.0",
+      "path": "placement/shared/asset-contract",
+      "supports": ["threejs", "unity", "unreal", "blender"],
+      "requiredTests": [
+        "pivot-location",
+        "ground-contact",
+        "scale-range",
+        "forward-up-axis",
+        "collision-presence",
+        "snap-point-validity"
+      ]
+    },
+    "planetarySurfacePlacement": {
+      "status": "experimental",
+      "version": "0.1.0",
+      "path": "placement/planetary-surfaces",
+      "supports": ["threejs"],
+      "plannedPorts": ["unity", "unreal"],
+      "requiredTests": [
+        "radial-up",
+        "tangent-forward",
+        "surface-normal",
+        "gravity-direction",
+        "large-structure-foundation",
+        "floating-origin-stability"
+      ]
+    }
+  }
+}
