@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#0b1020" />
+    <title>Jaron Control Certification Playground</title>
+  </head>
+  <body>
+    <main id="app">
+      <section id="game-shell" aria-label="Third-person control certification playground">
+        <canvas id="game"></canvas>
+        <div id="hud">
+          <div id="status">CONTROL CERTIFICATION · EXPERIMENTAL</div>
+          <pre id="telemetry"></pre>
+          <div id="instructions">WASD / arrows move · drag to look · Shift runs · mobile: left stick + right-side drag</div>
+        </div>
+        <div id="joystick" aria-label="Movement joystick">
+          <div id="joystick-knob"></div>
+        </div>
+        <button id="action" type="button">RESET</button>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
