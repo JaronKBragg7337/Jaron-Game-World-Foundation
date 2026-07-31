@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+html, body, #app { width: 100%; min-height: 100%; margin: 0; }
+body { background: #050812; color: #eef3ff; font-family: Inter, ui-sans-serif, system-ui, sans-serif; overflow: hidden; }
+button { font: inherit; }
+#game-shell { position: fixed; inset: 0; overflow: hidden; background: #111827; touch-action: none; user-select: none; -webkit-user-select: none; }
+#game { display: block; width: 100%; height: 100%; outline: none; touch-action: none; }
+#hud { position: absolute; inset: 0; pointer-events: none; padding: max(14px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) max(14px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left)); }
+#status { display: inline-block; padding: 7px 10px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; background: rgba(5,8,18,.72); backdrop-filter: blur(8px); font-size: 11px; font-weight: 800; letter-spacing: .09em; }
+#telemetry { position: absolute; top: max(54px, calc(env(safe-area-inset-top) + 54px)); right: max(12px, env(safe-area-inset-right)); margin: 0; padding: 10px 12px; min-width: 190px; border: 1px solid rgba(255,255,255,.18); border-radius: 12px; background: rgba(5,8,18,.68); font-size: 11px; line-height: 1.45; backdrop-filter: blur(8px); }
+#instructions { position: absolute; left: 50%; bottom: max(12px, env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(680px, calc(100% - 260px)); padding: 8px 12px; border-radius: 10px; background: rgba(5,8,18,.68); text-align: center; font-size: 12px; }
+#joystick { position: absolute; left: max(22px, calc(env(safe-area-inset-left) + 18px)); bottom: max(24px, calc(env(safe-area-inset-bottom) + 18px)); width: 112px; height: 112px; border: 2px solid rgba(255,255,255,.28); border-radius: 50%; background: rgba(8,15,31,.42); backdrop-filter: blur(7px); touch-action: none; }
+#joystick-knob { position: absolute; left: 50%; top: 50%; width: 54px; height: 54px; transform: translate(-50%, -50%); border-radius: 50%; border: 2px solid rgba(255,255,255,.5); background: rgba(224,235,255,.25); }
+#action { position: absolute; right: max(24px, calc(env(safe-area-inset-right) + 18px)); bottom: max(28px, calc(env(safe-area-inset-bottom) + 20px)); width: 78px; height: 78px; border-radius: 50%; border: 2px solid rgba(255,255,255,.42); color: white; background: rgba(15,23,42,.72); touch-action: none; }
+#action:active { transform: scale(.96); }
+@media (pointer: fine) { #joystick, #action { opacity: .45; } }
+@media (max-width: 700px) { #telemetry { min-width: 155px; font-size: 10px; } #instructions { display: none; } }
